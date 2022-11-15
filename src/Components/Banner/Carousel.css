@@ -1,0 +1,35 @@
+.carousel{
+    height: 50%;
+    display: flex;
+    align-items: center;
+    padding-top: 50px;
+}
+.carouselItem{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    cursor: pointer;
+    text-transform: uppercase;
+    color: white;
+}
+.actualprice{
+    padding-top: 10px;
+    font-size: 22px;
+}
+
+@media (max-width: 767px){
+    .carousel{
+        height: 10px;
+    }
+    .carousallogo{
+        height: 50px;
+        margin-top: 30px;
+    }
+    .symbol{
+        font-size: 16px;
+    }
+    .actualprice{
+        padding-top: 5px;
+        font-size: 18px;
+    }
+}

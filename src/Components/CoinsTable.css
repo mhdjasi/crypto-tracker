@@ -1,0 +1,63 @@
+.cointablehead{
+    font-size: 30px;
+    font-weight: 100;
+    margin: 18px;
+}
+.cointablesearch{
+    width: 100%;
+
+}
+
+.tablesymbol{
+    font-size: 22px;
+    text-transform: uppercase;
+}
+.tablesymbolname{
+    color: darkgray;
+}
+td {
+    border: .5px solid lightblue;
+  }
+  .firstcol{
+    width: 25rem;
+  }
+  .tableimage{
+    margin-top: 20px;
+  }
+  .head1{
+    padding: 10px 0px;
+  }
+@media (max-width:767px){
+    .cointablehead{
+        font-size: 25px;
+    }
+    .firstcol{
+        width: 1rem;
+      }
+      .tableimage{
+        height: 40px;
+        margin-top: 10px;
+      }
+      .tablesymbol{
+        font-size: 15px;
+    }
+    .tablesymbolname{
+        font-size: 13px;
+    }
+    .priceintable{
+        font-size: 13px;
+        padding: 0px 10px;
+    }
+    .profitandloss{
+        font-size: 13px;
+    }
+    .head1{
+        font-size: 14px;
+        padding: 5px 10px;
+    }
+    .marketcap{
+        font-size: 13px;
+        padding: 0px 10px;
+
+    }
+}
