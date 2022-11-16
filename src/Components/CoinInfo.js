@@ -3,6 +3,7 @@ import axios from 'axios';
 import React, { useEffect, useState } from 'react'
 import { Line } from 'react-chartjs-2';
 import { CryptoState } from '../CryptoContext'
+// eslint-disable-next-line
 import Chart from 'chart.js/auto';
 
 import './Coininfo.css'
