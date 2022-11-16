@@ -2,29 +2,22 @@ import {
   Container,
   createTheme,
   ThemeProvider,
-  styled,
+
   TextField,
-  TableContainer,
-  LinearProgress,
-  Table,
-  TableHead,
-  TableRow,
-  TableCell,
-  TableBody,
-  makeStyles,
+
 } from "@material-ui/core";
+import { Pagination } from "@material-ui/lab";
 import axios from "axios";
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
-import { CoinList } from "../config/api";
 import { CryptoState } from "../CryptoContext";
 import { numberWithCommas } from "./Banner/Carousel";
 import "./CoinsTable.css";
 
 function CoinsTable() {
   const [coins, setCoins] = useState([]);
-  const [loading, setLoading] = useState(false);
   const [search, setSearch] = useState([]);
+  const [page, setPage] = useState(1);
 
   const { currency } = CryptoState();
 
@@ -33,13 +26,13 @@ function CoinsTable() {
       `https://api.coingecko.com/api/v3/coins/markets?vs_currency=${currency}&order=market_cap_desc&per_page=100&page=1&sparkline=false`
     );
     setCoins(data);
-    setLoading(false);
   };
 
   console.log("coin table", coins);
 
   useEffect(() => {
     fetchCoins();
+        // eslint-disable-next-line
   }, [currency]);
 
   const darkTheme = createTheme({
@@ -144,7 +137,9 @@ function CoinsTable() {
                 </tr>
             </thead>
             <tbody>
-            {handleSearch().map((row)=>{
+            {handleSearch()
+            .slice((page - 1) * 10, (page - 1) * 10 + 10)
+            .map((row)=>{
             const profit = row.price_change_percentage_24h >= 0;
 return(
     <tr style={{textAlign:"center"}}>
@@ -193,6 +188,16 @@ return(
             })}
             </tbody>
         </table>
+<Pagination className="paginationbox"
+
+count={(handleSearch()?.length/10).toFixed(0)}
+
+onChange={(_, value) => {
+  setPage(value);
+  window.scroll(0, 480);
+}}
+/>
+
 
         </Container>
 

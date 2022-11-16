@@ -21,11 +21,22 @@ td {
   .firstcol{
     width: 25rem;
   }
+  .firstcol:hover{
+    background-color: #131111;
+  }
   .tableimage{
     margin-top: 20px;
   }
   .head1{
     padding: 10px 0px;
+  }
+
+  .paginationbox{
+    padding-top: 30px;
+    padding-bottom: 30px;
+width:100%;
+display:flex;
+justify-content: center;
   }
 @media (max-width:767px){
     .cointablehead{
@@ -36,7 +47,6 @@ td {
       }
       .tableimage{
         height: 40px;
-        margin-top: 10px;
       }
       .tablesymbol{
         font-size: 15px;

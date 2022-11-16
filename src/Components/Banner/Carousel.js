@@ -2,7 +2,6 @@ import { Container } from '@material-ui/core'
 import axios from 'axios'
 import React, { useState } from 'react'
 import { useEffect } from 'react';
-import { TrendingCoins } from '../../config/api';
 import './Carousel.css'
 import { CryptoState } from '../../CryptoContext.js'
 import AliceCarousel from 'react-alice-carousel';
@@ -27,6 +26,7 @@ console.log(trending);
 
 useEffect(() =>{
 fetchTrendingCoins()
+// eslint-disable-next-line
 },[currency]);
 
 const items = trending.map((coin) => {

@@ -1,0 +1,19 @@
+.selectbutton{
+    border: 1px solid gold;
+    border-radius: 5px;
+    padding: 10px;
+    cursor: pointer;
+
+
+}
+.selectbutton:hover{
+    background-color: gold;
+    color: black;
+}
+
+@media (max-width:900px){
+    .selectbutton{
+        padding: 10px;
+        font-size: 15px;
+    }
+}

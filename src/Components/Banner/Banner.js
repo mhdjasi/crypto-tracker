@@ -1,4 +1,4 @@
-import { Container, Typography } from '@material-ui/core'
+import { Container } from '@material-ui/core'
 import React from 'react'
 import './Banner.css'
 import Carousel from './Carousel'
